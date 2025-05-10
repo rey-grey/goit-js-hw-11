@@ -27,9 +27,13 @@ export function clearGallery() {
     gallery.innerHTML = "";
 }
 export function showLoader(element) {
-    element.classList.remove('hidden');
+    
+    element.style.display = 'block'; 
+    
 }
+
 export function hideLoader(element) {
-    element.classList.add('hidden');
+   
+    element.style.display = 'none'; 
 }
 

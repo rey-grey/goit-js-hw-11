@@ -17,7 +17,6 @@ form.addEventListener('submit', function (event) {
             title: 'Caution',
             message: 'You forgot important data',
         });
-        clearGallery(res.hits);
         return;
     }
 
@@ -32,7 +31,7 @@ form.addEventListener('submit', function (event) {
                     title: 'Caution',
                     message: 'Sorry, there are no images matching your search query. Please try again!',
                 });
-                clearGallery(res.hits);
+                clearGallery();
                 return;
             }
             
@@ -41,12 +40,15 @@ form.addEventListener('submit', function (event) {
         })
         .catch((error) => {
             console.error('Error fetching data:', error);
-            hideLoader(loader); 
+            
             iziToast.error({
                 title: 'Error',
                 message: 'Error.',
             });
            
+        })
+        .finally(() => {
+            hideLoader(loader);
         });
         
 });
