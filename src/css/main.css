@@ -1,0 +1,41 @@
+input {
+    border: 1px solid #808080;
+        border-radius: 4px;
+        width: 272px;
+        height: 40px;
+        padding-left: 16px;
+        font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.04em;
+            color: #808080;
+}
+input:hover {
+    border: 1px solid #0000; 
+}
+input:focus {
+    border: 1px solid #4e75ff;
+}
+
+
+button {
+    background: #4e75ff;
+    border-radius: 8px;
+        padding: 8px 16px;
+        width: 91px;
+        height: 40px;
+        color: white;
+        border: none;
+}
+button:hover {
+    background: #6c8cff;
+}
+
+.loader {
+   
+}
+
+
+        .gallery-item {
+            display: inline-block;
+            margin: 10px;   }
